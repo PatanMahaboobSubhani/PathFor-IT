@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+/* header */
+.top-header {
+  background-color: #f5f5f5;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.left-icons a img,
+.right-contact img {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.left-icons a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.right-contact span {
+  margin-left: 20px;
+  color: #000;
+}
+
+.right-contact img {
+  margin-right: 5px;
+}
+/* nav */
+nav {
+  background-color: #1e1e2f;
+  padding: 10px 20px;
+}
+
+ul.navbar {
+  list-style: none;
+  display: flex;
+}
+
+ul.navbar > li {
+  position: relative;
+  padding: 15px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+ul.navbar > li:hover {
+  background-color: #333;
+}
+
+ul.dropdown {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: #2d2d44;
+  list-style: none;
+  display: none;
+  min-width: 200px;
+  z-index: 100;
+}
+
+ul.dropdown li {
+  padding: 10px;
+  color: #f0f0f0;
+  border-bottom: 1px solid #444;
+}
+
+ul.dropdown li:hover {
+  background-color: #444;
+}
+
+li:hover > ul.dropdown {
+  display: block;
+}
+
+.page-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+  font-size: 16px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+a{
+    text-decoration: none;
+}
