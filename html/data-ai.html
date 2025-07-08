@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>PathFor IT</title>
+        <link rel="stylesheet" href="../Styles/style.css">
+        
+    </head>
+    <body>
+      <!-- Top Header Bar -->
+      <div class="top-header">
+        <div class="left-icons">
+          <a href="#" target="_blank"><img src="../Images/facebook.svg" alt="Facebook"></a>
+          <a href="#" target="_blank"><img src="../Images/instagram.svg" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/company/pathforit/" target="_blank"><img src="../Images/linkedin.svg" alt="LinkedIn"></a>
+          <a href="https://www.youtube.com/@pathforit" target="_blank"><img src="../Images/youtube.svg" alt="YouTube"></a>
+        </div>
+        <div class="right-contact">
+          <span><a href="+919205022040"><img src="../Images/phone.svg" alt="Phone"> +91-9205022040</a></span>
+          <span><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCHrlFZDxllXchpVBjfPDFKNDrDsXQRksBCDXNGtXNzdhkrTTPlglBQzgnQqfCsJGhNSvCrg"><img src="../Images/Gmail.svg" alt="Email"> info@pathforit.in</a></span>
+        </div>
+      </div>
+      <!-- Nav Bar-->
+       <nav>
+        <ul class="navbar">
+          <li>Services
+            <ul class="dropdown">
+              <li>Certification</li>
+              <li>Training Course</li>
+              <li>Workshops</li>
+              <li>Corporate Training</li>
+              <li>Placement Assistance</li>
+            </ul>
+          </li>
+          <li>Certification
+            <ul class="dropdown">
+              <li>AWS</li>
+              <li>Azure</li>
+              <li>GCP</li>
+              <li>CEH</li>
+              <li>CCNA</li>
+              <li>CCNP</li>
+              <li>CompTIA</li>
+              <li>Firewall & Antivirus</li>
+              </ul>
+          </li>
+          <li>Training Course
+            <ul class="dropdown">
+              <li>Cloud Computing (AWS, Azure, GCP)</li>
+              <li>Software Development</li>
+              <li>UI/UX</li>
+              <li>Graphics Designing</li>
+              <li>React JS</li>
+              <li>Front End</li>
+              <li>Cyber Security</li>
+              <li>CEH</li>
+            </ul>
+          </li>
+          <li>Workshops
+            <ul class="dropdown">
+              <li>Ethical Hacking</li>
+              <li>Machine Learning</li>
+              <li>UI/UX</li>
+              <li>AI</li>
+              <li>Cloud Computing</li>
+            </ul>
+          </li>
+          <li>Corporate Training
+            <ul class="dropdown">
+              <li>Corporate Clients</li>
+              <li>Variable ToC</li>
+              <li>Required ToC</li>
+              <li>Duration</li>
+              <li>Audience</li>
+            </ul>
+          </li>
+          <li>Placement Assistance</li>
+          <li class="switch-container">
+        <span id="labelNonIT" class="active-label">Non-IT to IT</span>
+        <label class="switch">
+            <input type="checkbox" id="mytoggleSwitch">
+            <span class="slider round"></span>
+        </label>
+        <span id="labelExperienced">Experienced Professionals</span>
+      </li>
+        <li><a href="./contact.html">Contact US</a></li>
+        </ul>
+      </nav>
+        <h1>Welcome to Data Science and AI</h1>
+
+
+      <!--<script src="./Script/index.js"></script>-->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.getElementById('mytoggleSwitch');
+            const currentPage = window.location.pathname.split('/').pop();
+            
+            // Set initial state
+            if (currentPage === 'experienced.html') {
+                toggle.checked = true;
+                document.getElementById('labelNonIT').classList.remove('active-label');
+                document.getElementById('labelExperienced').classList.add('active-label');
+            } else {
+                toggle.checked = false;
+            }
+
+            // Handle toggle change
+            toggle.addEventListener('change', function() {
+                if (this.checked) {
+                    window.location.href = './experienced.html';
+                } else {
+                    window.location.href = './index.html';
+                }
+            });
+        });
+    </script>
+
+    </body>
+</html>
