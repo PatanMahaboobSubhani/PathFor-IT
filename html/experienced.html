@@ -17,7 +17,7 @@
           <a href="https://www.youtube.com/@pathforit" target="_blank"><img src="../Images/youtube.svg" alt="YouTube"></a>
         </div>
         <div class="right-contact">
-          <span><a href="+919205022040"><img type="phone" src="./Images/phone.svg" alt="Phone"> +91-9205022040</a></span>
+          <span><a href="+919205022040"><img type="phone" src="../Images/phone.svg" alt="Phone"> +91-9205022040</a></span>
           <span><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCHrlFZDxllXchpVBjfPDFKNDrDsXQRksBCDXNGtXNzdhkrTTPlglBQzgnQqfCsJGhNSvCrg"><img src="../Images/Gmail.svg" alt="Email"> info@pathforit.in</a></span>
         </div>
       </div>
@@ -77,17 +77,36 @@
           </li>
           <li>Placement Assistance</li>
           <li class="switch-container">
-            <span id=""switchLabel>Non-IT to IT </span>
-              <label class="switch">
-                <a href="../index.html"><input type="checkbox" id="toggleView" onclick="checked"></a>
-                <span class="slider"></span>
-              </label>
-            <span id="switchLabel"> Experience Professionals</span>
-          </li>
-          <li>Contact US</li>
+        <span id="labelNonIT">Non-IT to IT</span>
+        <label class="switch">
+            <input type="checkbox" id="mytoggleSwitch" checked>
+            <span class="slider round"></span>
+        </label>
+        <span id="labelExperienced" class="active-label">Experienced Professionals</span>
+    </li>
+          <li><a href="./contact.html">Contact US</a></li>
         </ul>
       </nav>
       <h1>Welcome Experienced Professionals</h1>
-      <script src="../Script/index.js"></script>
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.getElementById('mytoggleSwitch');
+            
+            // Set initial state
+            toggle.checked = true;
+
+            // Handle toggle change
+            toggle.addEventListener('change', function() {
+                if (!this.checked) {
+                    window.location.href = '../index.html';
+                } else {
+                    // This ensures the toggle stays checked if user tries to uncheck and recheck
+                    this.checked = true;
+                }
+            });
+        });
+    </script>
+
+
     </body>
 </html>
