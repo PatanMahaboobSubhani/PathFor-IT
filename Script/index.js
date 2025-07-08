@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!showToggle && switchContainer) {
         // Hide the toggle if we're not on allowed pages
         switchContainer.style.display = 'none';
-        return; // Exit early, no need to bind toggle behavior
+        return; // Exit early, no need to bind toggle behaviour
     }
 
     // Set the toggle state based on the current page
